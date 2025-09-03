@@ -12,16 +12,18 @@ export default function Home() {
   const rowsPerPage = 10;
 
   useEffect(() => {
-    Papa.parse("/pegawai_db.csv", {
-      download: true,
-      header: true,
-      dynamicTyping: true,
-      skipEmptyLines: true,
-      complete: (results) => {
+    fetch("/pegawai.csv")
+      .then((response) => response.text())
+      .then((text) => {
+        const results = Papa.parse(text, {
+          header: true,
+          dynamicTyping: true,
+          skipEmptyLines: true,
+        });
         setHeaders(results.meta.fields);
         setData(results.data);
-      },
-    });
+      })
+      .catch((err) => console.error("Error Loading CSV:", err));
   }, []);
 
   const filteredData = data.filter((row) =>
