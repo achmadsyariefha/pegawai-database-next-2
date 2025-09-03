@@ -7,6 +7,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --border: #d1d5db;
   --font-sans: Arial, Helvetica, sans-serif;
   --font-mono: "Courier New", monospace;
 }
@@ -22,6 +23,7 @@
   :root {
     --background: #0a0a0a;
     --foreground: #e4e4e4;
+    --border: #d1d5db;
   }
 }
 

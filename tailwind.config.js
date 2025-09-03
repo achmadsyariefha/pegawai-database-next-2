@@ -10,6 +10,7 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        border: "var(--border)",
       },
       fontFamily: {
         sans: "var(--font-sans)",
