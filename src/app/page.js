@@ -62,11 +62,11 @@ export default function Home() {
         />
       </header>
       <div className="overflow-x-auto mt-6">
-          <table className="table-auto border-collapse border border-gray-300 w-full">
-            <thead className="bg-blue-900 text-white">
+          <table className="table-auto border-collapse border border-border w-full">
+            <thead className="bg-backgroud text-foreground">
               <tr>
                 {headers.map((h) => (
-                  <th key={h} className="border border-gray-300 p-2">
+                  <th key={h} className="border border-border p-2 text-left font-semibold">
                     {h}
                   </th>
                 ))}
@@ -74,9 +74,9 @@ export default function Home() {
             </thead>
             <tbody>
                 {paginatedData.map((row, i) => (
-                  <tr key={i} className="hover:bg-gray-100">
+                  <tr key={i} className="hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
                     {headers.map((h) => (
-                      <td key={h} className="border border-gray-300 p-2">
+                      <td key={h} className="border border-border p-2">
                         {row[h] || "-"}
                       </td>
                     ))}
