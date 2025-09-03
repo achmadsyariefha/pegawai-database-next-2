@@ -12,7 +12,7 @@ export default function Home() {
   const rowsPerPage = 10;
 
   useEffect(() => {
-    Papa.parse("./pegawai_db.csv", {
+    Papa.parse("/pegawai_db.csv", {
       download: true,
       header: true,
       dynamicTyping: true,
