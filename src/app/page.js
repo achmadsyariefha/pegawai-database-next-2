@@ -43,7 +43,7 @@ export default function Home() {
   return (
     <main className="p-6 bg-gray-500 min-h-screen">
       <header className="bg-white shadow p-4 text-center">
-        <div className="bg-background text-foreground font-sans">
+        <div className="border border-border bg-background text-foreground font-sans">
           Hello, Tailwind + CSS Variables!
         </div>
         <h1 className="text-2xl font-bold">Pegawai Database</h1>
