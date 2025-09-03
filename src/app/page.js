@@ -12,7 +12,9 @@ export default function Home() {
   const rowsPerPage = 10;
 
   useEffect(() => {
-    fetch("/pegawai.csv")
+    const baseUrl = process.env.NEXT_PUBLIC_CSV_PATH || `${window.location.origin}/pegawai_db.csv`;
+
+    fetch(baseUrl)
       .then((response) => response.text())
       .then((text) => {
         const results = Papa.parse(text, {
